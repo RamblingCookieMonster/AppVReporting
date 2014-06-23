@@ -66,6 +66,10 @@
 
     
     #Set up invoke sql cmd params
+        if(-not $ServerInstance -or -not $DatabaseName)
+        {
+            Throw "ServerInstance '$ServerInstance' and DatabaseName '$DatabaseName' must be defined."
+        }
         $invokeParams = @{
             ServerInstance = $ServerInstance
             Database = $DatabaseName
