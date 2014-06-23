@@ -1,4 +1,4 @@
-AppVReporting
+App-V Reporting Module
 =============
 
 This is a PowerShell module to simplify extracting data from the App-V reporting database.
@@ -6,13 +6,13 @@ This is a PowerShell module to simplify extracting data from the App-V reporting
 At the moment, you can pull details on App-V clients, packages, and usage.  Usage data includes data with inner joins.
 
 Get client version counts:
-  ![Get client version counts](/Media/AppVClient.png)
+  * ![Get client version counts](/Media/AppVClient.png)
 
 Get details on App-V usage:
-  ![Get App-V usage](/Media/AppVUse.png)
+  * ![Get App-V usage](/Media/AppVUse.png)
 
 Find packages by location:
-  ![Get App-V package](/Media/AppVPackage.png)
+  * ![Get App-V package](/Media/AppVPackage.png)
 
 #Prerequisites
     
