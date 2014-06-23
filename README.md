@@ -9,7 +9,7 @@ Get client version counts:
   ![Get client version counts](/Media/AppVClient.png)
 
 Get details on App-V usage:
-  ![Get App-V usage](/Media/AppVuse.png)
+  ![Get App-V usage](/Media/AppVUse.png)
 
 Find packages by location:
   ![Get App-V package](/Media/AppVPackage.png)
@@ -19,6 +19,7 @@ Find packages by location:
 * Environment configured to send data to an App-V reporting server
 * The account running this query must have access to read the App-V Reporting Database (PackageInformation, ClientInformation, ApplicationUsage tables)
   * Will add SQL credential support shortly, low priority in my case
+* Module folder downloaded, unblocked, extracted, available to import
 
 #Instructions
 
