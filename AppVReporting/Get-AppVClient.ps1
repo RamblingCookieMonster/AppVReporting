@@ -34,6 +34,9 @@
     .PARAMETER DatabaseName
         Name of the App-V Reporting database
 
+    .PARAMETER Credential
+        PSCredential to pass to Invoke-SqlCmd2.  Note that this will only take SQL credentials, it will not take domain credentials.
+
     .EXAMPLE
         #View all App-V clients in a grid
         Get-AppVClient | Out-Gridview
@@ -61,7 +64,9 @@
         [System.Collections.Hashtable]$QueryTable = $null,
         [switch]$QueryOnly,
         [string]$ServerInstance = $APPVReportingConfig.ServerInstance,
-        [string]$DatabaseName = $APPVReportingConfig.DatabaseName
+        [string]$DatabaseName = $APPVReportingConfig.DatabaseName,
+        [System.Management.Automation.PSCredential]$Credential
+
     )
 
     
@@ -73,6 +78,10 @@
         $invokeParams = @{
             ServerInstance = $ServerInstance
             Database = $DatabaseName
+        }
+        if($Credential)
+        {
+            $invokeParams.add('Credential',$Credential)
         }
 
     #Predefined parameters we can use.  Loop through these and add to querytable and sql paraemters if they don't exist already.
