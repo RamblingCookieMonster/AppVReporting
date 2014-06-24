@@ -17,8 +17,7 @@ Find packages by location:
 #Prerequisites
     
 * Environment configured to send data to an App-V reporting server
-* The account running this query must have access to read the App-V Reporting Database (PackageInformation, ClientInformation, ApplicationUsage tables)
-  * Will add SQL credential support shortly, low priority in my case
+* The account running this query must have access to read the App-V Reporting Database (PackageInformation, ClientInformation, ApplicationUsage tables).  Otherwise, SQL login credentials must be provided.
 * Module folder downloaded, unblocked, extracted, available to import
 
 #Instructions
